@@ -140,4 +140,51 @@ $form['zurb_foundation_5_script20'] = array(
       '#default_value' => theme_get_setting('zurb_foundation_5_script20', 'zurb_foundation_5'),
     );
 
+$form['zurb_foundation_5_juiced_main_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the main page area when you are using a Juiced layout'),
+      '#default_value' => theme_get_setting('zurb_foundation_5_juiced_main_background', 'zurb_foundation_5'),
+    );
+
+$form['zurb_foundation_5_juiced_main_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('zurb_foundation_5_juiced_main_background_blurred', 'zurb_foundation_5'),
+    );
+
+$form['zurb_foundation_5_juiced_big_statement_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the big statement page area when you are using a Juiced layout'),
+      '#default_value' => theme_get_setting('zurb_foundation_5_juiced_big_statement_background', 'zurb_foundation_5'),
+    );
+
+$form['zurb_foundation_5_juiced_big_statement_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('zurb_foundation_5_juiced_big_statement_background_blurred', 'zurb_foundation_5'),
+    );
+
+$form['zurb_foundation_5_body_main_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the main page area in a core layout.'),
+      '#default_value' => theme_get_setting('zurb_foundation_5_body_main_background', 'zurb_foundation_5'),
+    );
+
+$form['zurb_foundation_5_body_main_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('zurb_foundation_5_body_main_background_blurred', 'zurb_foundation_5'),
+    );
+
+$form['zurb_foundation_5_footer_main_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the footer area in a core layout.'),
+      '#default_value' => theme_get_setting('zurb_foundation_5_footer_main_background', 'zurb_foundation_5'),
+    );
+
+$form['zurb_foundation_5_footer_main_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('zurb_foundation_5_footer_main_background_blurred', 'zurb_foundation_5'),
+    );
 }

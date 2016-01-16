@@ -3,117 +3,68 @@
 /**
  * Implements hook_preprocess_maintenance_page().
  */
-function zurb_foundation_5_mobile_preprocess_maintenance_page(&$variables) {
-  backdrop_add_css(backdrop_get_path('theme', 'zurb_foundation_5') . '/css/maintenance-page.css');
+function zurb_foundation_5_preprocess_maintenance_page(&$variables) {
+  backdrop_add_css(backdrop_get_path('theme', 'bartik') . '/css/maintenance-page.css');
 }
 
 /**
  * Implements hook_preprocess_layout().
  */
-function zurb_foundation_5_mobile_preprocess_layout(&$variables) {
+function zurb_foundation_5_preprocess_layout(&$variables) {
   if ($variables['content']['header']) {
     $variables['content']['header'] = '<div class="l-header-inner">' . $variables['content']['header'] . '</div>';
   }
+
+$var1 = theme_get_setting('zurb_foundation_5_juiced_main_background');
+$var2 = theme_get_setting('zurb_foundation_5_juiced_big_statement_background');
+$var3 = theme_get_setting('zurb_foundation_5_juiced_main_background_blurred');
+$var4 = theme_get_setting('zurb_foundation_5_juiced_big_statement_background_blurred');
+
+if ($var1 && $var3 > 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { .juiced-main::before { content: ' '; width: 100%; height: 100%; display: block; position: absolute; z-index: -100; -webkit-filter: blur(20px); -moz-filter: blur(20px); -o-filter: blur(20px); -ms-filter: blur(20px); filter: blur(20px); opacity: 0.4;  background: url($var1) no-repeat; background-size: cover; background-position: center; } }", array('type' => 'inline'));
 }
 
-/**
- * Implements theme_menu_tree().
- */
-function zurb_foundation_5_mobile_menu_tree($variables) {
-  return '<ul class="menu clearfix">' . $variables['tree'] . '</ul>';
+if ($var1 && $var3 == 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { .juiced-main { background: url($var1) no-repeat; background-size: cover; background-position: center; } }", array('type' => 'inline'));
 }
 
-/**
- * Implements theme_field__field_type().
- */
-function zurb_foundation_5_mobile_field__taxonomy_term_reference($variables) {
-  $output = '';
+if ($var2 && $var4 > 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { .l-big-statement::before { content: ' '; width: 100%; height: 100%; display: block; position: absolute; z-index: -100; -webkit-filter: blur(20px); -moz-filter: blur(20px); -o-filter: blur(20px); -ms-filter: blur(20px); filter: blur(20px); opacity: 0.4;  background: url($var2) no-repeat fixed; background-size: cover; background-position: center; } }", array('type' => 'inline'));
+}
 
-  // Render the label, if it's not hidden.
-  if (!$variables['label_hidden']) {
-    $output .= '<h3 class="field-label">' . $variables['label'] . ': </h3>';
-  }
-
-  // Render the items.
-  $output .= ($variables['element']['#label_display'] == 'inline') ? '<ul class="links inline">' : '<ul class="links">';
-  foreach ($variables['items'] as $delta => $item) {
-    $item_attributes = (isset($variables['item_attributes'][$delta])) ? backdrop_attributes($variables['item_attributes'][$delta]) : '';
-    $output .= '<li class="taxonomy-term-reference-' . $delta . '"' . $item_attributes . '>' . backdrop_render($item) . '</li>';
-  }
-  $output .= '</ul>';
-
-  // Render the surrounding DIV with appropriate classes and attributes.
-  if (!in_array('clearfix', $variables['classes'])) {
-    $variables['classes'][] = 'clearfix';
-  }
-  $output = '<div class="' . implode(' ', $variables['classes']) . '"' . backdrop_attributes($variables['attributes']) . '>' . $output . '</div>';
-
-  return $output;
+if ($var2 && $var4 == 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { .l-big-statement { background: url($var2) no-repeat fixed; background-size: cover; background-position: center; } }", array('type' => 'inline'));
 }
 
 
-/**
-  * Overwrite theme_button()
-  */
-  function zurb_foundation_5_button($variables) {
-    $element = $variables['element'];
-    $element['#attributes']['type'] = 'submit';
-    element_set_attributes($element, array('id', 'name', 'value'));
-    $element['#attributes']['class'][] = 'form-' . $element['#button_type'];
-    if (!empty($element['#attributes']['disabled'])) {
-      $element['#attributes']['class'][] = 'form-button-disabled';
-    }
-    //custom class
-    $element['#attributes']['class'][] = 'button';
-    $element['#attributes']['class'][] = 'small';
-    $element['#attributes']['class'][] = 'radius';
-    return '<input' . backdrop_attributes($element['#attributes']) . ' />';
-  }
+$var5 = theme_get_setting('zurb_foundation_5_body_main_background');
+$var6 = theme_get_setting('zurb_foundation_5_footer_main_background');
+$var7 = theme_get_setting('zurb_foundation_5_body_main_background_blurred');
+$var8 = theme_get_setting('zurb_foundation_5_footer_main_background_blurred');
 
+if ($var5 && $var7 > 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { .layout::before { content: ' '; width: 100%; height: 100%; display: block; position: absolute; z-index: -100; -webkit-filter: blur(20px); -moz-filter: blur(20px); -o-filter: blur(20px); -ms-filter: blur(20px); filter: blur(20px); opacity: 0.4;  background: url($var5) no-repeat; background-size: cover; background-position: center; } }", array('type' => 'inline'));
+}
 
-/**
-  * Override theme_status_messages()
-  **/
-  function zurb_foundation_5_status_messages($variables) {
-    $display = $variables['display'];
-    $output = '';
-    $status_heading = array(
-      'status' => t('Status message'),
-      'error' => t('Error message'),
-      'warning' => t('Warning message'),
-    );
-    foreach (backdrop_get_messages($display) as $type => $messages) {
-      //convert to foundation classes
-      switch ( $type ) {
-        case 'error': $type = 'alert';
-        break;
-        case 'status': $type = 'success';
-        break;
-        case 'warning': $type = 'secondary';
-        break;
-      }
-      $output .= "<div data-alert class=\"alert-box $type\">\n";
-      if (!empty($status_heading[$type])) {
-        $output .= '<h2 class="element-invisible">' . $status_heading[$type] . "</h2>\n";
-      }
-      if (count($messages) > 1) {
-        $output .= " <ul>\n";
-        foreach ($messages as $message) {
-          $output .= '  <li>' . $message . "</li>\n";
-        }
-        $output .= " </ul>\n";
-      }
-      else {
-        $output .= $messages[0];
-      }
-      $output .= "<a href=\"\" class=\"close\">&times;</a></div>\n";
-    }
-    return $output;
-  }
+if ($var5 && $var7 == 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { .layout { background: url($var5) no-repeat; background-size: cover; background-position: center; } }", array('type' => 'inline'));
+}
 
+if ($var6 && $var8 > 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { footer.l-footer::before { content: ' '; width: 100%; height: 100%; display: block; position: absolute; z-index: -100; -webkit-filter: blur(20px); -moz-filter: blur(20px); -o-filter: blur(20px); -ms-filter: blur(20px); filter: blur(20px); opacity: 0.4;  background: url($var6) no-repeat fixed; background-size: cover; background-position: center; } footer.l-footer { background: transparent; } }", array('type' => 'inline'));
+}
 
-
-function zurb_foundation_5_breadcrumb($variables) {
+if ($var6 && $var8 == 0)
+{
+backdrop_add_css("@media screen and (min-width: 769px) { footer.l-footer { background: url($var6) no-repeat fixed; background-size: cover; background-position: center; } }", array('type' => 'inline'));
+}
 
 if (theme_get_setting('zurb_foundation_5_cdn') > 0)
 {
@@ -335,8 +286,101 @@ backdrop_add_js("themes/zurb_foundation_5/js/foundation.topbar.js", array('type'
 
 }
 
-
 backdrop_add_js("themes/zurb_foundation_5/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-backdrop_add_js("document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')", array('type' => 'inline', 'scope' => 'footer', 'weight' => 9999));
-
+// backdrop_add_js("document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')", array('type' => 'inline', 'scope' => 'footer', 'weight' => 9999));
 }
+
+/**
+ * Implements theme_menu_tree().
+ */
+function zurb_foundation_5_menu_tree($variables) {
+  return '<ul class="menu clearfix">' . $variables['tree'] . '</ul>';
+}
+
+/**
+ * Implements theme_field__field_type().
+ */
+function zurb_foundation_5_field__taxonomy_term_reference($variables) {
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<h3 class="field-label">' . $variables['label'] . ': </h3>';
+  }
+
+  // Render the items.
+  $output .= ($variables['element']['#label_display'] == 'inline') ? '<ul class="links inline">' : '<ul class="links">';
+  foreach ($variables['items'] as $delta => $item) {
+    $item_attributes = (isset($variables['item_attributes'][$delta])) ? backdrop_attributes($variables['item_attributes'][$delta]) : '';
+    $output .= '<li class="taxonomy-term-reference-' . $delta . '"' . $item_attributes . '>' . backdrop_render($item) . '</li>';
+  }
+  $output .= '</ul>';
+
+  // Render the surrounding DIV with appropriate classes and attributes.
+  if (!in_array('clearfix', $variables['classes'])) {
+    $variables['classes'][] = 'clearfix';
+  }
+  $output = '<div class="' . implode(' ', $variables['classes']) . '"' . backdrop_attributes($variables['attributes']) . '>' . $output . '</div>';
+
+  return $output;
+}
+
+
+/**
+  * Overwrite theme_button()
+  */
+  function zurb_foundation_5_button($variables) {
+    $element = $variables['element'];
+    $element['#attributes']['type'] = 'submit';
+    element_set_attributes($element, array('id', 'name', 'value'));
+    $element['#attributes']['class'][] = 'form-' . $element['#button_type'];
+    if (!empty($element['#attributes']['disabled'])) {
+      $element['#attributes']['class'][] = 'form-button-disabled';
+    }
+    //custom class
+    $element['#attributes']['class'][] = 'button';
+    $element['#attributes']['class'][] = 'small';
+    $element['#attributes']['class'][] = 'radius';
+    return '<input' . backdrop_attributes($element['#attributes']) . ' />';
+  }
+
+
+/**
+  * Override theme_status_messages()
+  **/
+  function zurb_foundation_5_status_messages($variables) {
+    $display = $variables['display'];
+    $output = '';
+    $status_heading = array(
+      'status' => t('Status message'),
+      'error' => t('Error message'),
+      'warning' => t('Warning message'),
+    );
+    foreach (backdrop_get_messages($display) as $type => $messages) {
+      //convert to foundation classes
+      switch ( $type ) {
+        case 'error': $type = 'alert';
+        break;
+        case 'status': $type = 'success';
+        break;
+        case 'warning': $type = 'secondary';
+        break;
+      }
+      $output .= "<div data-alert class=\"alert-box $type\">\n";
+      if (!empty($status_heading[$type])) {
+        $output .= '<h2 class="element-invisible">' . $status_heading[$type] . "</h2>\n";
+      }
+      if (count($messages) > 1) {
+        $output .= " <ul>\n";
+        foreach ($messages as $message) {
+          $output .= '  <li>' . $message . "</li>\n";
+        }
+        $output .= " </ul>\n";
+      }
+      else {
+        $output .= $messages[0];
+      }
+      $output .= "<a href=\"\" class=\"close\">&times;</a></div>\n";
+    }
+    return $output;
+  }

@@ -5,24 +5,33 @@
  * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
  * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
 */
-@charset "UTF-8";
+@charset "UTF-8" ;
 
-header.l-header {
-    background-color: $oil;
+header.l-header,
+footer.l-footer {
+  background-color: $oil;
 }
 
-.name-and-slogan {
-    color: $ghost;
+.name-and-slogan,
+footer.l-footer {
+  color: $ghost;
 }
 
-.dl-menuwrapper button:hover, .dl-menuwrapper button.dl-active, .dl-menuwrapper ul {
-    background: $primary-color !important;
+.dl-menuwrapper button:hover,
+.dl-menuwrapper button.dl-active,
+.dl-menuwrapper ul {
+  background: $primary-color !important;
 }
 
 li a.active {
-    color: $primary-color;
+  color: $primary-color;
 }
 
-.l-container, .l-header ul.menu li a.active, .l-header ul.menu li.active-trail a {
-    background: inherit;
+.l-container {
+  background-color: $white;
+}
+
+.l-header ul.menu li a.active,
+.l-header ul.menu li.active-trail a {
+  background: inherit;
 }
