@@ -16,8 +16,6 @@
   $(document).ready(function() {
 
     // run Javascript on page load here
-    console.log("Welcome to the console");
-    $(document).foundation();
 
   });
 })(jQuery, Backdrop, this, this.document);

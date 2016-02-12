@@ -59,11 +59,10 @@
               'scrollTop' : scroll_top
             }, settings.duration, settings.easing, function () {
               if (history.pushState) {
-                        history.pushState(null, null, anchor.pathname + '#' + hash);
+                history.pushState(null, null, anchor.pathname + anchor.search + '#' + hash);
+              } else {
+                location.hash = anchor.pathname + anchor.search + '#' + hash;
               }
-                    else {
-                        location.hash = anchor.pathname + '#' + hash;
-                    }
             });
           }
         })
@@ -81,7 +80,7 @@
       $('[' + this.attr_name() + '=fixed]', self.scope).each(function (idx, el) {
         var expedition = $(this),
             settings = expedition.data('magellan-expedition-init'),
-            styles = expedition.attr('styles'), // save styles
+            styles = expedition.attr('style'), // save styles
             top_offset, fixed_top;
 
         expedition.attr('style', '');

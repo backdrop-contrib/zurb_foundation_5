@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/**
+ * Style file
+ *
+ * This file is compiled into css/your-custom.css
+ * Uncomment the lines of the features you would like to use.
+ * Comment the lines of the features you don't need on this website
+ */
+
+@import "../node_modules/susy/sass/susy";
+@import "bourbon";
+@import "neat";
+
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: auto,
+  container-position: center,
+  columns: 4,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: content-box,
+  last-flow: to,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+
+/* ---------- Import Zurb base ----------  */
+@import "core/foundation/functions";
+@import "core/foundation/settings";
+
+/* ---------- Import parent theme base ---------- */
+@import 'core/helpers/variables';
+@import 'your-custom/helpers/variables';
+
+@import 'core/helpers/functions';
+@import 'your-custom/helpers/functions';
+
+@import 'core/helpers/mixins';
+@import 'your-custom/helpers/mixins';
+
+@import 'core/helpers/extendables';
+@import 'your-custom/helpers/extendables';
+
+// Or selectively include components
+@import 'core/foundation/components/global';
+@import 'core/foundation/components/grid';
+@import 'core/foundation/components/accordion';
+@import 'core/foundation/components/alert-boxes';
+@import 'core/foundation/components/block-grid';
+@import 'core/foundation/components/breadcrumbs';
+@import 'core/foundation/components/button-groups';
+@import 'core/foundation/components/buttons';
+@import 'core/foundation/components/clearing';
+@import 'core/foundation/components/dropdown';
+@import 'core/foundation/components/dropdown-buttons';
+@import 'core/foundation/components/flex-video';
+@import 'core/foundation/components/forms';
+@import 'core/foundation/components/icon-bar';
+@import 'core/foundation/components/inline-lists';
+@import 'core/foundation/components/joyride';
+@import 'core/foundation/components/keystrokes';
+@import 'core/foundation/components/labels';
+@import 'core/foundation/components/magellan';
+@import 'core/foundation/components/orbit';
+@import 'core/foundation/components/pagination';
+@import 'core/foundation/components/panels';
+@import 'core/foundation/components/pricing-tables';
+@import 'core/foundation/components/progress-bars';
+@import 'core/foundation/components/range-slider';
+@import 'core/foundation/components/reveal';
+@import 'core/foundation/components/side-nav';
+@import 'core/foundation/components/split-buttons';
+@import 'core/foundation/components/sub-nav';
+@import 'core/foundation/components/switches';
+@import 'core/foundation/components/tables';
+@import 'core/foundation/components/tabs';
+@import 'core/foundation/components/thumbs';
+@import 'core/foundation/components/tooltips';
+@import 'core/foundation/components/top-bar';
+@import 'core/foundation/components/type';
+@import 'core/foundation/components/offcanvas';
+@import 'core/foundation/components/visibility';
+
+@import 'core/design/typography';
+@import 'your-custom/design/typography';
+
+@import 'core/design/layout';
+@import 'your-custom/design/layout';
+
+@import 'core/design/components';
+@import 'your-custom/design/components';
+
+@import 'core/design/navigation';
+@import 'your-custom/design/navigation';
+
+@import 'core/design/colors';
+@import 'your-custom/design/colors';
