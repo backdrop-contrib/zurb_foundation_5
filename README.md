@@ -1,7 +1,7 @@
 ZURB FOUNDATION 5
 -----------------
 
-This theme uses the Foundation 5 CSS/Javascript framework from Zurb for a base theme.
+This theme uses the Foundation 5 CSS/Javascript framework from ZURB for a base theme.
 
 - novices can edit just the css/your-custom.css file to alter the appearence of your website.
 
@@ -58,11 +58,11 @@ TESTED
 
 This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop 1.2.
 
-http://dev-backdropthemes.pantheon.io/zurb-5
+http://dev-backdropthemes.pantheon.io/ZURB-5
 
-http://dev-backdropthemes.pantheon.io/demo-zurb-5
+http://dev-backdropthemes.pantheon.io/demo-ZURB-5
 
-http://dev-backdropthemes.pantheon.io/admin/appearance/styleguide/zurb_foundation_5
+http://dev-backdropthemes.pantheon.io/admin/appearance/styleguide/ZURB_foundation_5
 
 KNOWN ISSUES
 ---------------------
@@ -75,8 +75,8 @@ You can look through the folders and manually integrate what you need, or delete
 SPECIAL THANKS
 --------------
 
-This theme uses the Foundation 5 theme framework from Zurb
-Special thanks to the developers at Zurb for this great work!
+This theme uses the Foundation 5 theme framework from ZURB
+Special thanks to the developers at ZURB for this great work!
 Tweet us at @ZURBfoundation
 
 This theme can use the Bourbon/Neat SASS extensions from thoughtbot.  Uncomment those lines in your gruntfile.js to get started!
@@ -97,7 +97,7 @@ COMING FROM DRUPAL?
 
 If you are using Backdrop and have a previous knowledge of Drupal, you will notice that Drupal themes spend a lot of template files and CSS arranging things on the page where this theme doesn't so much.  This theme is more of a style guide of how page elements are supposed to look and not much layout.  It relies on the layouts module.
 
-This theme does not use the Zurb grid or any grid by default -- it relies on the Layout module to provide that.
+This theme does not use the ZURB grid or any grid by default -- it relies on the Layout module to provide that.
 
 JAVASCRIPT USAGE
 ------------------
@@ -124,7 +124,7 @@ To accomplish sub-theming easily with this theme:
 
 Copy the folder zurb_foundation_5_subtheme and paste it in your site's root THEMES directory.  After doing this, you will have at least two folders in that same level: zurb_foundation_5 and zurb_foundation_5_subtheme.  Delete the old zurb_foundation_5_subtheme folder that's inside of the parent theme zurb_foundation_5.  Inside of your top-level zurb_foundation_5_subtheme, rename zurb_foundation_5_subtheme.info.starterkit to zurb_foundation_5_subtheme.info
 
-After clearing your site cache, visit /admin/appearance/list .  Enable Zurb Foundation 5 Subtheme, and make it your default theme.  Now, you can edit custom styles in this theme while it inherits styles from its parent theme zurb_foundation_5.  When updates come out for the zurb_foundation_5 theme, you can just copy and paste or update the parent theme any time and it won't erase your custom theming work (which is done now in the child theme zurb_foundation_5_subtheme).
+After clearing your site cache, visit /admin/appearance/list .  Enable ZURB Foundation 5 Subtheme, and make it your default theme.  Now, you can edit custom styles in this theme while it inherits styles from its parent theme zurb_foundation_5.  When updates come out for the zurb_foundation_5 theme, you can just copy and paste or update the parent theme any time and it won't erase your custom theming work (which is done now in the child theme zurb_foundation_5_subtheme).
 
 You work in the top-level zurb_foundation_5_subtheme theme.
 
@@ -224,7 +224,7 @@ THEMES FOLDER
 - partials for people to work on different themes of the website (seasonal, regional, etc)
 
 FOUNDATION FOLDER
-- partials from the official Zurb Foundation 5 framework
+- partials from the official ZURB Foundation 5 framework
 
 USAGE
 -----
