@@ -99,103 +99,103 @@ if (theme_get_setting('zurb_foundation_5_subtheme_js_cdn_each') > 0)
 backdrop_add_js("themes/zurb_foundation_5/js/foundation.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 if (theme_get_setting('zurb_foundation_5_script1') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.abide.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.abide.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script2') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.accordion.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.accordion.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script3') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.alert.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.alert.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script4') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.clearing.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.clearing.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script5') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.dropdown.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.dropdown.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script6') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.equalizer.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.equalizer.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script7') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.interchange.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.interchange.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script8') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.joyride.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.joyride.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script9') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.magellan.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.magellan.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script10') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.offcanvas.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.offcanvas.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script11') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.orbit.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.orbit.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script12') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.reveal.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.reveal.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script13') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.slider.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.slider.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script14') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.tab.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.tab.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script15') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.tooltip.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.tooltip.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script16') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.topbar.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.topbar.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script17') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/fastclick.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/fastclick.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script18') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/jquery.cookie.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/jquery.cookie.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script19') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/modernizr.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/modernizr.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('zurb_foundation_5_subtheme_script20') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/placeholder.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/placeholder.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 }
