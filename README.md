@@ -1,6 +1,8 @@
 ZURB FOUNDATION 5
 -----------------
 
+This theme is NOT updated for Backdrop CMS 1.4+ and not currently supported.  Use at your own risk.
+
 This theme uses the Foundation 5 CSS/Javascript framework from ZURB for a base theme.
 
 - novices can edit just the css/your-custom.css file to alter the appearence of your website.
@@ -57,6 +59,8 @@ TESTED
 -----
 
 This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop 1.2.
+
+This theme is unsupported for Backdrop 1.4+ due to lack of time.
 
 http://dev-backdropthemes.pantheon.io/ZURB-5
 
